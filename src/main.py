@@ -7,7 +7,7 @@ from datetime import datetime
 import re
 import os
 
-DB_PATH = "tia/database.db"
+DB_PATH = "database.db"
 
 def db_exec(query, params=(), fetchone=False, fetchall=False, commit=False):
     con = sqlite3.connect(DB_PATH, timeout=10)
@@ -918,7 +918,7 @@ def montar_aba_configuracoes(parent, main_win, usuario):
                 fg_color="#2d6a4f", hover_color="#1b4332",
                 corner_radius=4, height=34, width=220).pack(anchor="w", padx=18, pady=(10, 16))
 
-    CONFIG_FILE = "tia/relatorio_senha.txt"
+    CONFIG_FILE = "relatorio_senha.txt"
 
     def ler_senha_rel():
         try:
@@ -980,7 +980,7 @@ def montar_aba_configuracoes(parent, main_win, usuario):
 
 
 def visualizar_relatorio(parent, rid):
-    CONFIG_FILE = "tia/relatorio_senha.txt"
+    CONFIG_FILE = "relatorio_senha.txt"
 
     def ler_senha():
         try:
